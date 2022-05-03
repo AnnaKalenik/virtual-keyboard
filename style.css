@@ -1,0 +1,267 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #EBECF0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+body, .title, .keyboard__text {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+
+div, .title, .keyboard__text {
+  color: #BABECC;
+  text-shadow: 1px 1px 1px #FFF;
+}
+
+.container, .keyboard__wrapper, .keyboard__keys, .keyboard__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container, .keyboard__wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
+
+.keyboard__wrapper {
+  max-width: 1024px;
+  width: 95%;
+}
+
+.keyboard__textarea {
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.keyboard__text {
+  padding: 32px 56px;
+  -webkit-box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+          box-shadow: inset 2px 2px 5px #BABECC, inset -5px -5px 10px #FFF;
+  width: 100%;
+  height: 240px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.keyboard__text:focus {
+  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.keyboard__keys {
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 16px;
+}
+
+.keyboard__row {
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+.key, .keyboard__text {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  background-color: #EBECF0;
+  text-shadow: 1px 1px 0 #FFF;
+}
+
+.key {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48px;
+  height: 48px;
+  color: #61677C;
+  font-size: 19.2px;
+  font-weight: 600;
+  line-height: 0;
+  padding: 16px;
+  border-radius: 8px;
+  -webkit-box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+          box-shadow: -5px -5px 20px #FFF, 5px 5px 20px #BABECC;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.key:hover {
+  -webkit-box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+          box-shadow: -2px -2px 5px #FFF, 2px 2px 5px #BABECC;
+}
+
+.key:active {
+  color: #AE1100;
+  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+}
+
+.key .icon {
+  margin-right: 8px;
+}
+
+.backspace {
+  width: 144px;
+}
+
+.tab {
+  width: 64px;
+}
+
+.del {
+  width: 64px;
+}
+
+.caps {
+  width: 144px;
+}
+
+.enter {
+  width: 112px;
+}
+
+.shift_left {
+  width: 144px;
+}
+
+.ctrl_left {
+  width: 80px;
+}
+
+.ctrl_right {
+  width: 64px;
+}
+
+.win {
+  width: 64px;
+}
+
+.alt_left {
+  width: 64px;
+}
+
+.alt_right {
+  width: 64px;
+}
+
+.space {
+  width: 368px;
+}
