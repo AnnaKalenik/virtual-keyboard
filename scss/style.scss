@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+@import'./normalize';
+
+$size: 16px;
+$color-red: #AE1100;
+$color-bg: #EBECF0;
+$color-shadow: #BABECC;
+$color-white: #FFF;
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $color-bg;
+    transition: 0.2s;
+}
+
+body, .title, .keyboard__text {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.2px;
+    font-size: $size;
+}
+
+div, .title, .keyboard__text {
+    color: $color-shadow;
+    text-shadow: 1px 1px 1px $color-white;
+}
+
+.container, .keyboard__wrapper, .keyboard__keys, .keyboard__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container, .keyboard__wrapper {
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: $size * 2;
+    font-weight: 700;
+    margin-bottom: $size * 5;
+}
+
+.keyboard {
+	&__wrapper {
+        max-width: 1024px;
+        width: 95%;
+	}
+    &__textarea {
+        width: 100%;
+        margin-bottom: $size * 2;
+    }
+	&__text {
+        padding: $size * 2 $size * 3.5;
+        box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
+        width: 100%;
+        height: $size * 15;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+        appearance: none;
+        
+        &:focus {
+            box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+        }
+	}
+	&__keys {
+        width: 100%;
+        flex-direction: column;
+        row-gap: $size;
+	}
+	&__row {
+        column-gap: $size;
+	}
+}
+
+.key, .keyboard__text {
+    border: 0;
+    outline: 0;
+    font-size: $size;
+    border-radius: $size * 20;
+
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+}
+
+.key {
+    display:inline-flex;
+    justify-content: center;
+    align-items:center;
+    width: $size*3;
+    height: $size*3;
+    color:#61677C;
+    font-size: $size*1.2;
+    font-weight: 600;
+    line-height: 0;
+    padding: $size;
+    border-radius: $size/2;
+    box-shadow: -5px -5px 20px $color-white,  5px 5px 20px $color-shadow;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    
+    &:hover {
+        box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+
+    &:active {
+        color: $color-red;
+        box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+    }
+
+    .icon {
+        margin-right: $size/2;
+    }
+}
+
+.backspace {
+    width: $size*9;
+}
+.tab {
+    width: $size*4;
+}
+.del {
+    width: $size*4;
+}
+.caps {
+    width: $size*9;
+}
+.enter {
+    width: $size*7;
+}
+.shift {
+	&_left {
+        width: $size*9;
+	}
+	&_right {
+	}
+}
+.up {
+
+}
+.ctrl {
+	&_left {
+        width: $size*5;
+	}
+	&_right {
+        width: $size*4;
+	}
+}
+.win {
+    width: $size*4;
+}
+.alt {
+	&_left {
+        width: $size*4;
+	}
+	&_right {
+        width: $size*4;
+	}
+}
+.space {
+    width: $size*23;
+}
+.left {
+
+}
+.down {
+
+}
+.right {
+
+}
