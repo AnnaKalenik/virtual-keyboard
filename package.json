@@ -1,0 +1,28 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-config-rallycoding": "^3.2.0",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint -c .eslintrc.js --ext .js js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaKalenik/virtual-keyboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaKalenik/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/AnnaKalenik/virtual-keyboard#readme"
+}
