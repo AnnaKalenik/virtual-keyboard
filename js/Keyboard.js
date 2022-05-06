@@ -58,6 +58,26 @@ export default class Keyboard {
             })
         }
     }
+
+    keyHandler() {
+        window.addEventListener('keydown', (event) => {
+            for (let i = 0; i < this.keysArr.length; i++) {
+                if (event.code === this.keysArr[i]) {
+                    this.activeKey = this.$body.querySelector(`.${this.keysArr[i].toLowerCase()}`);
+                    this.activeKey.classList.add('down');
+                }
+            }
+        })
+    
+        window.addEventListener('keyup', (event) => {
+            for (let i = 0; i < this.keysArr.length; i++) {
+                if (event.code === this.keysArr[i]) {
+                    this.activeKey = this.$body.querySelector(`.${this.keysArr[i].toLowerCase()}`);
+                    this.activeKey.classList.remove('down');
+                }
+            }
+        })
+    }
 }
 
 
