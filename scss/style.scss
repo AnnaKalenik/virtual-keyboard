@@ -11,7 +11,7 @@ $color-white: #FFF;
 body, html {
     font-family: 'Montserrat', sans-serif;
     background-color: $color-bg;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 body, .title, .keyboard__text {
@@ -62,7 +62,7 @@ div, .title {
         width: 100%;
         height: $size * 15;
         box-sizing: border-box;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.4s ease-in-out;
         appearance: none;
         
         &:focus {
@@ -112,65 +112,50 @@ div, .title {
         color: $color-red;
         box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
     }
+}
 
-    .icon {
-        margin-right: $size/2;
-    }
+.down {
+    color: $color-red;
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
 }
 
 .backspace {
     width: $size*9;
 }
 .tab {
-    width: $size*4;
+    width: $size*5;
 }
-.del {
-    width: $size*4;
+.delete {
+    width: $size*3;
 }
-.caps {
-    width: $size*9;
+.capslock {
+    width: $size*6.5;
 }
 .enter {
-    width: $size*7;
+    width: $size*9.5;
 }
-.shift {
-	&_left {
-        width: $size*9;
-	}
-	&_right {
-	}
+.shiftleft {
+    width: $size*8;
 }
-.up {
+.shiftright {
+    width: $size*8;
+}
+.controlleft {
+    width: $size*5;
+}
 
-}
-.ctrl {
-	&_left {
-        width: $size*5;
-	}
-	&_right {
-        width: $size*4;
-	}
+.controlright {
+    width: $size*4;
 }
 .win {
     width: $size*4;
 }
-.alt {
-	&_left {
-        width: $size*4;
-	}
-	&_right {
-        width: $size*4;
-	}
+.altleft {
+    width: $size*4;
+}
+.altright {
+     width: $size*4;
 }
 .space {
     width: $size*23;
-}
-.left {
-
-}
-.down {
-
-}
-.right {
-
 }

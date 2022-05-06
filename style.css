@@ -77,9 +77,9 @@ h1, h2, h3, h4, h5, h6 {
 body, html {
   font-family: 'Montserrat', sans-serif;
   background-color: #EBECF0;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 body, .title, .keyboard__text {
@@ -142,9 +142,9 @@ div, .title {
   height: 240px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -215,8 +215,10 @@ div, .title {
           box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
-.key .icon {
-  margin-right: 8px;
+.down {
+  color: #AE1100;
+  -webkit-box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
+          box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #FFF;
 }
 
 .backspace {
@@ -224,30 +226,34 @@ div, .title {
 }
 
 .tab {
-  width: 64px;
-}
-
-.del {
-  width: 64px;
-}
-
-.caps {
-  width: 144px;
-}
-
-.enter {
-  width: 112px;
-}
-
-.shift_left {
-  width: 144px;
-}
-
-.ctrl_left {
   width: 80px;
 }
 
-.ctrl_right {
+.delete {
+  width: 48px;
+}
+
+.capslock {
+  width: 104px;
+}
+
+.enter {
+  width: 152px;
+}
+
+.shiftleft {
+  width: 128px;
+}
+
+.shiftright {
+  width: 128px;
+}
+
+.controlleft {
+  width: 80px;
+}
+
+.controlright {
   width: 64px;
 }
 
@@ -255,11 +261,11 @@ div, .title {
   width: 64px;
 }
 
-.alt_left {
+.altleft {
   width: 64px;
 }
 
-.alt_right {
+.altright {
   width: 64px;
 }
 
