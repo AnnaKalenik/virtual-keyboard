@@ -15,12 +15,19 @@ const getTemplate = () => {
 }
 
 export default class Keyboard {
-    constructor(options) {
-        this.keysArr = options;
+    constructor(keysArr, keys, functionKeys) {
+        this.keysArr = keysArr;
+        this.keys = keys;
+        this.functionKeys = functionKeys;
         this.$body = document.querySelector('body');
 
         this.#render();
+
+        this.$textArea = this.$body.querySelector('#text');
+        this.value = this.$textArea.value;
+
         this.keyHandler();
+        this.klickHandler();
     }
 
     #render() {
@@ -59,6 +66,16 @@ export default class Keyboard {
         }
     }
 
+    addTextToTextarea(event) {
+        for (let i = 0; i < this.keys.length; i++) {
+            if (event.code === this.keys[i] || event.target.classList[1] === this.keys[i].toLowerCase()) {
+                this.activeKey = this.$body.querySelector(`.${this.keys[i].toLowerCase()}`);
+                this.value += this.activeKey.innerHTML;
+                this.$textArea.value = `${this.value}`;
+            }
+        }
+    }
+
     keyHandler() {
         window.addEventListener('keydown', (event) => {
             for (let i = 0; i < this.keysArr.length; i++) {
@@ -67,6 +84,8 @@ export default class Keyboard {
                     this.activeKey.classList.add('down');
                 }
             }
+
+            this.addTextToTextarea(event);
         })
     
         window.addEventListener('keyup', (event) => {
@@ -77,6 +96,13 @@ export default class Keyboard {
                 }
             }
         })
+    }
+
+    klickHandler() {
+        window.addEventListener('click', (event) => {
+            this.addTextToTextarea(event);
+        })
+        
     }
 }
 
