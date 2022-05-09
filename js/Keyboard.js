@@ -20,6 +20,7 @@ export default class Keyboard {
         this.keys = keys;
         this.functionKeys = functionKeys;
         this.$body = document.querySelector('body');
+        this.flag = false;
 
         this.#render();
 
@@ -28,12 +29,15 @@ export default class Keyboard {
 
         this.keyHandler();
         this.klickHandler();
+        this.toogleLanguage();
     }
 
     #render() {
         this.$body.innerHTML = getTemplate();
         this.#createKeys();
     }
+
+
 
     #createKeys() {
         this.$keysContainer = this.$body.querySelector('.keyboard__keys');
@@ -96,6 +100,7 @@ export default class Keyboard {
                 }
             }
         })
+
     }
 
     klickHandler() {
@@ -103,6 +108,17 @@ export default class Keyboard {
             this.addTextToTextarea(event);
         })
         
+    }
+
+    toogleLanguage() {
+        window.addEventListener('keydown', (event) => {
+                if(event.code === 'ShiftLeft') {
+                    this.flag = true;
+                }
+                if(event.code === 'AltLeft' && this.flag === true) {
+                    this.flag = false;
+                }
+        }) 
     }
 }
 
